@@ -35,7 +35,7 @@ T = 20; % Modify if you want to simulate a longer or shorter period
 
 %% Simulation
 
-[t,y] = ode23(@(t,y)maglev(t,y,par,xd),[0,T],IC); % The file maglev.m must be in the same folder
+[t,y] = ode23(@(t,y)maglev(y,par,xd),[0,T],IC); % The file maglev.m must be in the same folder
 
 %% Plots
 
@@ -49,10 +49,10 @@ grid on
 hold on 
 plot(t,y(:,1),'LineWidth',2)
 hold off
-title('$q$','interpreter','latex','FontSize',22)
+title('$q$','interpreter','latex','FontSize',20)
 set(gca,'FontSize',18)
 legend('$q_{d}$','$q$','interpreter','latex','Location','SouthEast')
-ylabel('Position [m]','interpreter','latex','FontSize',22)
+ylabel('Position [m]','interpreter','latex','FontSize',20)
 
 % Momentum
 
@@ -62,9 +62,9 @@ grid on
 hold on 
 plot(t,y(:,2),'LineWidth',2)
 hold off
-title('$p$','interpreter','latex','FontSize',22)
+title('$p$','interpreter','latex','FontSize',20)
 set(gca,'FontSize',18)
-ylabel('Momentum [kg$\cdot$m/s]','interpreter','latex','FontSize',22)
+ylabel('Momentum [kg$\cdot$m/s]','interpreter','latex','FontSize',20)
 
 % Flux
 
@@ -74,8 +74,8 @@ grid on
 hold on 
 plot(t,y(:,3),'LineWidth',2)
 hold off
-title('$\varphi$','interpreter','latex','FontSize',22)
+title('$\varphi$','interpreter','latex','FontSize',20)
 set(gca,'FontSize',18)
 legend('$\varphi_{d}$','$\varphi$','interpreter','latex','Location','SouthEast')
-xlabel('Time [s]','interpreter','latex','FontSize',22)
-ylabel('Flux [Wb]','interpreter','latex','FontSize',22)
+xlabel('Time [s]','interpreter','latex','FontSize',20)
+ylabel('Flux [Wb]','interpreter','latex','FontSize',20)

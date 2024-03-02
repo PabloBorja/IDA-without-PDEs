@@ -6,7 +6,7 @@
 % ***** SECaM, Univerity of Plymouth, Plymouth, UK ***** %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function dy = fermenter(t,y,par,xd)
+function dy = fermenter(y,par,xd)
 
 
 % This example illustrates the results of Proposition 1  

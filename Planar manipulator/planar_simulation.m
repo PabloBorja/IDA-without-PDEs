@@ -35,7 +35,7 @@ T = 5; % Modify if you want to simulate a longer or shorter period
 
 %% Simulation
 
-[t,y] = ode23(@(t,y)planar(t,y,par,xd),[0,T],IC); % The file planar.m must be in the same folder
+[t,y] = ode23(@(t,y)planar(y,par,xd),[0,T],IC); % The file planar.m must be in the same folder
 
 %% Plots
 
@@ -49,10 +49,10 @@ grid on
 hold on 
 plot(t,y(:,1),'LineWidth',2)
 hold off
-title('$q_{1}$','interpreter','latex','FontSize',22)
+title('$q_{1}$','interpreter','latex','FontSize',20)
 set(gca,'FontSize',18)
 legend('$q_{1_{d}}$','$q_{1}$','interpreter','latex')
-ylabel('Angular position [rad]','interpreter','latex','FontSize',22)
+ylabel('Position [rad]','interpreter','latex','FontSize',20)
 
 % q2
 
@@ -62,10 +62,10 @@ grid on
 hold on 
 plot(t,y(:,2),'LineWidth',2)
 hold off
-title('$q_{2}$','interpreter','latex','FontSize',22)
+title('$q_{2}$','interpreter','latex','FontSize',20)
 set(gca,'FontSize',18)
 legend('$q_{2_{d}}$','$q_{2}$','interpreter','latex')
-ylabel('Angular position [rad]','interpreter','latex','FontSize',22)
+ylabel('Position [rad]','interpreter','latex','FontSize',20)
 
 % p1
 
@@ -75,9 +75,10 @@ grid on
 hold on 
 plot(t,y(:,3),'LineWidth',2)
 hold off
-title('$p_{1}$','interpreter','latex','FontSize',22)
+title('$p_{1}$','interpreter','latex','FontSize',20)
 set(gca,'FontSize',18)
-ylabel('Angular momentum [kg$\cdot$m$^{2}$/s]','interpreter','latex','FontSize',22)
+ylabel('Momentum [kg$\cdot$m$^{2}$/s]','interpreter','latex','FontSize',22)
+xlabel('Time [s]','interpreter','latex','FontSize',20)
 
 % p2
 
@@ -87,7 +88,7 @@ grid on
 hold on 
 plot(t,y(:,4),'LineWidth',2)
 hold off
-title('$p_{2}$','interpreter','latex','FontSize',22)
+title('$p_{2}$','interpreter','latex','FontSize',20)
 set(gca,'FontSize',18)
-xlabel('Time [s]','interpreter','latex','FontSize',22)
-ylabel('Angular momentum [kg$\cdot$m$^{2}$/s]','interpreter','latex','FontSize',22)
+xlabel('Time [s]','interpreter','latex','FontSize',20)
+ylabel('Momentum [kg$\cdot$m$^{2}$/s]','interpreter','latex','FontSize',22)

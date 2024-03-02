@@ -6,7 +6,7 @@
 % ***** SECaM, Univerity of Plymouth, Plymouth, UK ***** %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function dy = planar(t,y,par,xd)
+function dy = planar(y,par,xd)
 
 
 % This example illustrates the results of Proposition 2  

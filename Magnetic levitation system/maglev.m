@@ -6,7 +6,7 @@
 % ***** SECaM, Univerity of Plymouth, Plymouth, UK ***** %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function dy = maglev(t,y,par,xd)
+function dy = maglev(y,par,xd)
 
 
 % This example illustrates the results of Proposition 4  

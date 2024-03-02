@@ -6,7 +6,7 @@
 % ***** SECaM, Univerity of Plymouth, Plymouth, UK ***** %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function dy = mems(t,y,par,xd)
+function dy = mems(y,par,xd)
 
 
 % This example illustrates the results of Proposition 3  

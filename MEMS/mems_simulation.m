@@ -38,7 +38,7 @@ T = 0.005; % Modify if you want to simulate a longer or shorter period
 
 opts = odeset('RelTol',1e-10,'AbsTol',1e-12);
 
-[t,y] = ode45(@(t,y)mems(t,y,par,xd),[0,T],IC,opts); % The file mems.m must be in the same folder
+[t,y] = ode45(@(t,y)mems(y,par,xd),[0,T],IC,opts); % The file mems.m must be in the same folder
 
 %% Plots
 
@@ -52,10 +52,10 @@ grid on
 hold on 
 plot(t,y(:,1),'LineWidth',2)
 hold off
-title('$q$','interpreter','latex','FontSize',22)
+title('$q$','interpreter','latex','FontSize',20)
 set(gca,'FontSize',18)
 legend('$q_{d}$','$q$','interpreter','latex','Location','NorthEast')
-ylabel('Position [m]','interpreter','latex','FontSize',22)
+ylabel('Position [m]','interpreter','latex','FontSize',20)
 
 % Momentum
 
@@ -65,9 +65,9 @@ grid on
 hold on 
 plot(t,y(:,2),'LineWidth',2)
 hold off
-title('$p$','interpreter','latex','FontSize',22)
+title('$p$','interpreter','latex','FontSize',20)
 set(gca,'FontSize',18)
-ylabel('Momentum [kg$\cdot$m/s]','interpreter','latex','FontSize',22)
+ylabel('Momentum [kg$\cdot$m/s]','interpreter','latex','FontSize',20)
 
 % Charge
 
@@ -77,8 +77,8 @@ grid on
 hold on 
 plot(t,y(:,3),'LineWidth',2)
 hold off
-title('$Q$','interpreter','latex','FontSize',22)
+title('$Q$','interpreter','latex','FontSize',20)
 set(gca,'FontSize',18)
 legend('$Q_{d}$','$Q$','interpreter','latex','Location','SouthEast')
-xlabel('Time [s]','interpreter','latex','FontSize',22)
-ylabel('Charge [C]','interpreter','latex','FontSize',22)
+xlabel('Time [s]','interpreter','latex','FontSize',20)
+ylabel('Charge [C]','interpreter','latex','FontSize',20)
