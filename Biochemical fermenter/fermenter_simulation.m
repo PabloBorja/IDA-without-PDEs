@@ -6,7 +6,7 @@
 % ***** SECaM, Univerity of Plymouth, Plymouth, UK ***** %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Parameters of the plant. These parameter are taken from:
+% Parameters of the plant. These parameters are taken from:
 
 % ~~~~~~~~~~~~~~~~
 
