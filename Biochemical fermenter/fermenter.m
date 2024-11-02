@@ -43,8 +43,8 @@ x2d = xd(2);
 
 % Control parameters
 
-gamma = x1^2/2 - Sf*Y*x2^2/2 + Y*x2^3/3;
-gamma_s = x1d^2/2 - Sf*Y*x2d^2/2 + Y*x2d^3/3;
+gamma = -x1^2/2 + Sf*Y*x2^2/2 - Y*x2^3/3;
+gamma_s = -x1d^2/2 + Sf*Y*x2d^2/2 - Y*x2d^3/3;
 u_s = 1/x1d;
 
 % Control gains. Modify if necessary
@@ -56,7 +56,7 @@ Kdi = 15/(mu*x1); % Modifying the closed-loop damping
 
 ngPhi = u_s + K*(gamma-gamma_s); % Partial of Φ with respect to γ
 
-nPhi = [x1; -Sf*Y*x2+Y*x2^2]*ngPhi; % Gradient of Φ with respect to x. 
+nPhi = -[x1; -Sf*Y*x2+Y*x2^2]*ngPhi; % Gradient of Φ with respect to x. 
 % You are encouraged to try different functions Φ
 
 nHd = nPhi + nH; % Gradient of Hd. 
